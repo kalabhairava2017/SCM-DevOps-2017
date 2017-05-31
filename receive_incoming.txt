@@ -1,0 +1,14 @@
+
+PATH=$PATH:/opt/rational/clearcase/bin/
+export PATH
+ 
+ 
+echo "Current shipping bay contents"
+ls  -ltr /opt/rational/clearcase/shipping/ms_ship/incoming
+echo "=========================================================================================="
+ 
+ 
+ 
+echo "Starting receipt of sync packets at `date`"
+multitool syncreplica -import -receive
+echo "Ending receipt of sync packets at `date`"
