@@ -1,0 +1,6 @@
+cat list_replicas.sh
+cleartool lsvob -s  | while read V
+do
+echo "==============================================================================="
+cleartool lsreplica -invob $V
+done
