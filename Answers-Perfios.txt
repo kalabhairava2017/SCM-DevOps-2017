@@ -1,0 +1,69 @@
+1. Explain the output of ls -l command which gives the following sample output
+drwxrwxr-x 2 vikash developer 4096 Apr 24 13:00 src/
+-rw-rw-r-- 1 vikash developer 1074 Nov 27  2014 LICENSE
+Applicable to both
+
+Answer:
+
+We consider as below for better understanding
+Field 1	Field 2	Field 3	Field 4	Field 5	Field 6	Field 7	Field 8	Field 9		Field 10
+d	rwx	rwx	r-x	2	vikash developer 4096	Apr 24 13:00	src/
+
+
+field1  - for File, d for Directory, l for Link
+
+The second,third,fourth fields
+
+
+Those are permissions that means read, write and execute, and comes in three different fields that belongs to the permission the:
+
+second: The owner has over the file
+third: The group has over the file
+fourth: Everybody else has over the file
+
+The fifth field
+
+This field specifies the number of links or directories inside this directory.
+
+The sixth field is the user
+
+The user that owns the file, or directory
+
+The seventh field is te group
+
+The group that file belongs to, and any user in that group will have the permissions given in the third field over that file.
+
+The eighth field
+
+The size in bytes, you may modify this by using the -h option together with -l this will have the output in k,M,G for a better understanding.
+
+The ninth field
+
+The date of last modification
+
+The tenth field
+
+The name of the directory
+
+
+
+
+2. What's the command to set the file permission of a file "sample.txt to  ?-rwxr-xr--. 
+Answer: chmod 754 sample.txt
+
+ 
+3. What's the command to to change the ownership of the file LICENCE from the owner vikash of develper group to raktim in qa group
+Answer: chown vikash:raktim LICENCE
+
+ 
+4. Count of lines containing word “Perfios” in file.txt: 
+Answer:grep -c "Perios" file.txt
+ 
+ 
+5. Share a sample ansible script that you have written.
+
+To be honest i have overview of Ansible but not written playbook.
+ 
+
+6. Share the link on Github or any place with sample shell scripts that you have written.
+ https://github.com/kalabhairava2017/SCM-DevOps-2017
